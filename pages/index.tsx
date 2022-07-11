@@ -1,9 +1,37 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Parallax } from "@react-spring/parallax";
+import Top from "components/top";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import styles from "/styles/Home.module.scss";
 
 const Home: NextPage = () => {
+  const [page, setPage] = useState<number>(0);
+  const myRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
+
+    if (myRef.current) {
+      const scrollTop = Math.ceil(myRef.current.scrollTop);
+      const height = myRef.current?.offsetHeight;
+
+      if (height) setPage(Math.floor(scrollTop / height));
+    }
+  };
+
+  const scrollTo = (selectedPage: number) => {
+    if (selectedPage == page) {
+      return;
+    } else if (myRef.current) {
+      const scrollTop = Math.ceil(myRef.current.scrollTop);
+      const height = myRef.current?.offsetHeight;
+      myRef.current.scrollTop = height * selectedPage;
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,60 +41,130 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className={styles.card}>
+          <div className={styles.top}>
+            <Top />
+          </div>
+          <div className={styles.info_parent_continaier}>
+            <ul className={styles.indicator}>
+              <li
+                className={page == 0 ? styles.active : ""}
+                onClick={() => {
+                  scrollTo(0);
+                }}
+              ></li>
+              <li
+                className={page == 1 ? styles.active : ""}
+                onClick={() => {
+                  scrollTo(1);
+                }}
+              ></li>
+              <li
+                className={page == 2 ? styles.active : ""}
+                onClick={() => {
+                  scrollTo(2);
+                }}
+              ></li>
+            </ul>
+            <div
+              className={styles.info_container}
+              ref={myRef}
+              onScroll={handleScroll}
+            >
+              <section className={styles.about_me}>
+                <h1>Introduction</h1>
+                <div className={styles.content}>
+                  <div className={styles.profile_picture}>
+                    <Image
+                      src={"/images/p.jpg"}
+                      alt="profile"
+                      width={90}
+                      height={90}
+                    />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsum inventore a unde exercitationem illo quaerat quae
+                    Ipsum inventore a unde exercitationem illo quaerat quae
+                  </p>
+                </div>
+              </section>
+              <section className={styles.skills}>
+                <h1>My Expreiencse</h1>
+                <div className={styles.content}>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsum inventore a unde exercitationem illo quaerat quae
+                  </p>
+                </div>
+                <div className={styles.skill_container}>
+                  <div>
+                    <p>Django</p>
+                    <div className={styles.container}>
+                      <div
+                        className={`${styles.skills} ${styles.django}`}
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    {" "}
+                    <p>React.js</p>
+                    <div className={styles.container}>
+                      <div
+                        className={`${styles.skills} ${styles.reactjs}`}
+                      ></div>
+                    </div>
+                  </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+                  <div>
+                    {" "}
+                    <p>Node.js</p>
+                    <div className={styles.container}>
+                      <div
+                        className={`${styles.skills} ${styles.nodejs}`}
+                      ></div>
+                    </div>
+                  </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                  <div>
+                    {" "}
+                    <p>Next.js</p>
+                    <div className={styles.container}>
+                      <div
+                        className={`${styles.skills} ${styles.nextjs}`}
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    {" "}
+                    <p>UI/UX</p>
+                    <div className={styles.container}>
+                      <div className={`${styles.skills} ${styles.ui}`}></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section className={styles.contact}>
+                <h1>contact </h1>
+              </section>
+            </div>
+          </div>
+          <div className={styles.big_picture}>
+            <Image
+              src={"/images/p3.png"}
+              alt="profile"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
+          </div>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
