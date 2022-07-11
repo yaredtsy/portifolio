@@ -1,5 +1,5 @@
 @import "./globals.scss";
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+@import url("/font/Ubuntu-Bold.ttf");
 
 .card {
   width: 80%;
@@ -107,6 +107,7 @@
   }
   h1 {
     font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
     font-size: 4rem;
     grid-column: 1/-1;
     text-transform: capitalize;
@@ -140,6 +141,7 @@
   }
   .content {
     font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
     grid-row: 2/3;
     grid-column: 2/-1;
     height: 100%;
@@ -182,7 +184,7 @@
     p {
       margin-left: 5px;
       grid-column: 2/-1;
-      font-weight: 100;
+      font-weight: 700;
       color: #9fb2b6;
     }
   }
