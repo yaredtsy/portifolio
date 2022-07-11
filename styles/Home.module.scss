@@ -243,12 +243,12 @@
     transition: all 0.3s;
     content: "";
     position: absolute;
-    top: -100%;
-    left: -100%;
+    top: 0;
+    left: 0;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 100px;
-    transform: translate(-10%, -10%);
+    transform: translate(-35%, -35%);
     border: 3px solid white;
     transition: all 0.3s;
 
