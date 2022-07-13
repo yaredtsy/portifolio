@@ -10,9 +10,11 @@ import styles from "/styles/Home.module.scss";
 const Home: NextPage = () => {
   const [page, setPage] = useState<number>(0);
   const myRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     ReactGA.initialize("G-29SJQK0429");
   }, []);
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
