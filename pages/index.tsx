@@ -4,12 +4,15 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import ReactGA from "react-ga4";
 import styles from "/styles/Home.module.scss";
 
 const Home: NextPage = () => {
   const [page, setPage] = useState<number>(0);
   const myRef = useRef<HTMLDivElement>(null);
-
+  useEffect(() => {
+    ReactGA.initialize("G-29SJQK0429");
+  }, []);
   const handleScroll = () => {
     const position = window.pageYOffset;
     const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
@@ -74,18 +77,21 @@ const Home: NextPage = () => {
               <section className={styles.about_me}>
                 <h1>Introduction</h1>
                 <div className={styles.content}>
-                  <div className={styles.profile_picture}>
+                  {/* <div className={styles.profile_picture}>
                     <Image
                       src={"/images/p.jpg"}
                       alt="profile"
                       width={90}
                       height={90}
                     />
-                  </div>
+                  </div> */}
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsum inventore a unde exercitationem illo quaerat quae
-                    Ipsum inventore a unde exercitationem illo quaerat quae
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+                    quidem non eum quibusdam atque. Perspiciatis, minima
+                    consectetur sit dignissimos ex iusto laborum ullam.
+                    Blanditiis amet, quo explicabo nostrum magnam
+                    iure.consectetur sit dignissimos ex iusto laborum ullam.
+                    Blanditiis amet, quo explicabo nostrum magnam iure.
                   </p>
                 </div>
               </section>
