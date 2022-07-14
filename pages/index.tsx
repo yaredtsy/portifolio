@@ -77,7 +77,7 @@ const Home: NextPage = () => {
               onScroll={handleScroll}
             >
               <section className={styles.about_me}>
-                <h1>Introduction</h1>
+                <h1>About Me</h1>
                 <div className={styles.content}>
                   {/* <div className={styles.profile_picture}>
                     <Image
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.big_picture}>
             <Image
-              src={"/images/p3.png"}
+              src={"/images/p4.png"}
               alt="profile"
               width="100%"
               height="100%"

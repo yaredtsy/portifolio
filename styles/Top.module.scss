@@ -9,6 +9,9 @@
   color: white;
 
   .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #4a5256;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
@@ -38,8 +41,13 @@
   .contact_me {
     font-weight: 700;
     font-family: "Ubuntu", sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover {
+      transform: scale(1.5);
+    }
     @media screen and (max-width: 900px) {
       font-size: 0.9rem;
     }
