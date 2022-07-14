@@ -1,5 +1,10 @@
+import { FunctionComponent } from "react";
 import styles from "/styles/Top.module.scss";
-const Top = () => {
+
+interface TopType {
+  scrollTo: any;
+}
+const Top: FunctionComponent<TopType> = ({ scrollTo }) => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
@@ -13,7 +18,9 @@ const Top = () => {
         <span>Yared tsegaye</span>
         <span>Full stack devloper</span>
       </div>
-      <div className={styles.contact_me}>Contact ME</div>
+      <div className={styles.contact_me} onClick={() => scrollTo(2.1)}>
+        Contact me
+      </div>
     </div>
   );
 };

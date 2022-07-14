@@ -48,7 +48,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.card}>
           <div className={styles.top}>
-            <Top />
+            <Top scrollTo={scrollTo} />
           </div>
           <div className={styles.info_parent_continaier}>
             <ul className={styles.indicator}>
@@ -93,7 +93,6 @@ const Home: NextPage = () => {
                     consectetur sit dignissimos ex iusto laborum ullam.
                     Blanditiis amet, quo explicabo nostrum magnam
                     iure.consectetur sit dignissimos ex iusto laborum ullam.
-                    Blanditiis amet, quo explicabo nostrum magnam iure.
                   </p>
                 </div>
               </section>
@@ -157,6 +156,7 @@ const Home: NextPage = () => {
               </section>
             </div>
           </div>
+
           <div className={styles.big_picture}>
             <Image
               src={"/images/p4.png"}
@@ -166,6 +166,11 @@ const Home: NextPage = () => {
               layout="responsive"
               objectFit="contain"
             />
+          </div>
+
+          <div className={styles.social_media}>
+            <a className={styles.social_media_Link}>Linkdin</a>
+            <a className={styles.social_media_Link}>Github</a>
           </div>
         </div>
       </main>
