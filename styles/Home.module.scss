@@ -397,7 +397,10 @@
     font-size: 1.5rem;
     transform-origin: left;
     transform: rotate(90deg);
-
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
     @media screen and(max-width:900px) {
       font-size: 1rem;
     }
