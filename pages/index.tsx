@@ -23,7 +23,10 @@ const Home: NextPage = () => {
       const scrollTop = Math.ceil(myRef.current.scrollTop);
       const height = myRef.current?.offsetHeight;
 
-      if (height) setPage(Math.ceil(scrollTop / height));
+      if (height)
+        setPage(
+          Math.ceil(scrollTop / height) > 2 ? 2 : Math.ceil(scrollTop / height)
+        );
     }
   };
 
