@@ -19,7 +19,7 @@ const Top: FunctionComponent<TopType> = ({ scrollTo }) => {
         <span>Full stack devloper</span>
       </div>
       <div className={styles.contact_me} onClick={() => scrollTo(2.1)}>
-        Contact me
+        <span>Contact me</span>
       </div>
     </div>
   );
