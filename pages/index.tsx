@@ -184,8 +184,22 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.social_media}>
-            <a className={styles.social_media_Link}>Linkdin</a>
-            <a className={styles.social_media_Link}>Github</a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/yared-tsegaye-2aa3521ba/"
+              className={styles.social_media_Link}
+              rel="noopener noreferrer"
+            >
+              Linkdin
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/yaredtsy"
+              className={styles.social_media_Link}
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
           </div>
         </div>
       </main>
