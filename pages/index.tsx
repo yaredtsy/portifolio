@@ -153,6 +153,18 @@ const Home: NextPage = () => {
               </section>
               <section className={styles.contact}>
                 <h1>contact </h1>
+                <div className={styles.contact_container}>
+                  <span>Yared Tsegaye</span>
+                  <div>
+                    <span className={styles.labels}>phoneNumber</span>{" "}
+                    <span>(+251) 970751906</span>
+                  </div>
+                  <div>
+                    <span className={styles.labels}>Gmail</span>
+                    <span>tsyared@gmail.com</span>
+                  </div>
+                  <div>Ethiopia, Addis Ababa</div>
+                </div>
               </section>
             </div>
           </div>
