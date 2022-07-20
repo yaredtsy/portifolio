@@ -4,16 +4,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import ReactGA from "react-ga4";
+
 import styles from "/styles/Home.module.scss";
 
 const Home: NextPage = () => {
   const [page, setPage] = useState<number>(0);
   const myRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    ReactGA.initialize("G-29SJQK0429");
-  }, []);
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -190,7 +186,7 @@ const Home: NextPage = () => {
               className={styles.social_media_Link}
               rel="noopener noreferrer"
             >
-              Linkdin
+              Linkedin
             </a>
             <a
               target="_blank"
