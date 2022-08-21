@@ -1,10 +1,10 @@
-import { FunctionComponent } from "react";
-import styles from "/styles/Top.module.scss";
+import {FunctionComponent} from 'react';
+import styles from '/styles/Top.module.scss';
 
-interface TopType {
+interface TopProps {
   scrollTo: any;
 }
-const Top: FunctionComponent<TopType> = ({ scrollTo }) => {
+const Top: FunctionComponent<TopProps> = ({scrollTo}) => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
