@@ -32,64 +32,60 @@ const DetailInfo: FunctionComponent<DetailInfoProps> = ({page, myRef, scrollTo, 
       </ul>
       <div className={styles.info_container} ref={myRef} onScroll={handleScroll}>
         <section className={styles.about_me}>
-          <h1>About Me</h1>
+          <h1 className={styles.titles}>About Me</h1>
           <div className={styles.content}>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut quidem non eum quibusdam atque. Perspiciatis,
-              minima consectetur sit dignissimos ex iusto laborum ullam. Blanditiis amet, quo explicabo nostrum magnam
-              iure.consectetur sit dignissimos ex iusto laborum ullam.
+              With over 5 years of comprehensive programming experience, I have a proven track record of delivering
+              exceptional results for startups across diverse industries including social media, fintech, and ERP.
             </p>
           </div>
         </section>
         <section className={styles.skills}>
-          <h1>My Expreiencse</h1>
+          <h1 className={styles.titles}>Weapone of my choice</h1>
           <div className={styles.content}>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum inventore a unde exercitationem illo
-              quaerat quae
-            </p>
-          </div>
-          <div className={styles.skill_container}>
-            <div>
-              <p>Django</p>
-              <div className={styles.container}>
-                <div className={`${styles.skills} ${styles.django}`}></div>
+            <p>I bring a versatile skill set to the table, with experience in a multitude of programming languages</p>
+            <div className={styles.skill_container}>
+              <div>
+                <p>Django</p>
+                <div className={styles.container}>
+                  <div className={`${styles.skills} ${styles.django}`}></div>
+                </div>
               </div>
-            </div>
-            <div>
-              {' '}
-              <p>React.js</p>
-              <div className={styles.container}>
-                <div className={`${styles.skills} ${styles.reactjs}`}></div>
+              <div>
+                {' '}
+                <p>React.js</p>
+                <div className={styles.container}>
+                  <div className={`${styles.skills} ${styles.reactjs}`}></div>
+                </div>
               </div>
-            </div>
 
-            <div>
-              {' '}
-              <p>Node.js</p>
-              <div className={styles.container}>
-                <div className={`${styles.skills} ${styles.nodejs}`}></div>
+              <div>
+                {' '}
+                <p>Node.js</p>
+                <div className={styles.container}>
+                  <div className={`${styles.skills} ${styles.nodejs}`}></div>
+                </div>
               </div>
-            </div>
 
-            <div>
-              {' '}
-              <p>Next.js</p>
-              <div className={styles.container}>
-                <div className={`${styles.skills} ${styles.nextjs}`}></div>
+              <div>
+                {' '}
+                <p>Next.js</p>
+                <div className={styles.container}>
+                  <div className={`${styles.skills} ${styles.nextjs}`}></div>
+                </div>
               </div>
-            </div>
-            <div>
-              {' '}
-              <p>UI/UX</p>
-              <div className={styles.container}>
-                <div className={`${styles.skills} ${styles.ui}`}></div>
+              <div>
+                {' '}
+                <p>UI/UX</p>
+                <div className={styles.container}>
+                  <div className={`${styles.skills} ${styles.ui}`}></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section className={styles.contact}>
-          <h1>contact </h1>
+          <h1 className={styles.titles}>contact </h1>
           <div className={styles.contact_container}>
             <span>Yared Tsegaye</span>
             <div>
