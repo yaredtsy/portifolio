@@ -13,7 +13,7 @@ const DetailInfo: FunctionComponent<DetailInfoProps> = ({page, myRef, scrollTo, 
     const element = myRef.current;
 
     if (element) {
-      const {bind, unbind} = createScrollSnap(element, {snapDestinationY: '90%', threshold: 0.3});
+      const {bind, unbind} = createScrollSnap(element, {snapDestinationY: '100%', threshold: 0.1});
     }
   }, [myRef]);
   return (
