@@ -51,7 +51,7 @@ const DetailInfo: FunctionComponent<DetailInfoProps> = ({page, myRef, scrollTo, 
         />
 
         <InfoComponent
-          title="Weapone of my choice"
+          title="weapon of my choice"
           content={
             <>
               {' '}
