@@ -30,7 +30,7 @@
   z-index: 1;
   height: 100%;
   width: 100%;
-  scroll-snap-type: both mandatory;
+  // scroll-snap-type: both mandatory;
   overflow-x: scroll;
   overflow-y: scroll;
   .titles {
@@ -74,17 +74,15 @@
       font-size: 1.25rem;
     }
   }
-  .about_me {
-    background-color: transparent;
-    color: white;
+  .contentZoom {
+    transform: scale(100%) !important;
+    transition: 2s !important;
+    opacity: 1 !important;
   }
-
-  .skills {
-    color: white;
-    background-color: transparent;
-  }
-
-  .contact {
+  .content {
+    transform: scale(80%);
+    transition: 2s;
+    opacity: 0;
     color: white;
     background-color: transparent;
     .contact_container {
@@ -113,7 +111,7 @@
       }
     }
   }
-  .content {
+  .contentBody {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     grid-row: 2/-1;
@@ -179,6 +177,12 @@
     left: 5px;
     list-style: none;
     top: 18%;
+  }
+  @media screen and(max-width:600px) {
+    height: 70%;
+    left: 5px;
+    list-style: none;
+    top: 25%;
   }
   // transform: translateY(50%);
   &::after {
