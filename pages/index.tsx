@@ -3,6 +3,7 @@ import {useRef, useState} from 'react';
 import type {NextPage} from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import {NextSeo} from 'next-seo';
 
 // components
 import DetailInfo from 'components/info';
@@ -36,14 +37,16 @@ const Home: NextPage = () => {
       myRef.current.scrollTop = height * selectedPage;
     }
   };
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Yared Tsegaye</title>
-        <meta name="description" content="Portfolio website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <NextSeo
+        title="Yared Tsegaye"
+        description="Full-stack web developer"
+        openGraph={{
+          images: [{url: '/images/p4.png', width: 800, height: 600, alt: 'Og Image Alt'}],
+        }}
+      />
       <main className={styles.main}>
         <div className={styles.card}>
           <div className={styles.top}>

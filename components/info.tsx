@@ -2,6 +2,7 @@ import {FunctionComponent, UIEventHandler, useEffect, useRef, useState} from 're
 import InfoComponent from './info.component';
 import styles from '/styles/Info.module.scss';
 import createScrollSnap from 'scroll-snap';
+
 interface DetailInfoProps {
   page: number;
   myRef: any;
