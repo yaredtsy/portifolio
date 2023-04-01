@@ -51,19 +51,14 @@ $gradient-angle: 180deg;
     content: '';
     position: absolute;
     z-index: -1;
-    inset: 0;
+
+    inset: -0.5rem;
     background: linear-gradient(var(--rotate), #5ddcff, #3c67e3 67%, #4e00c2);
     border-radius: inherit;
     animation: spin 4.5s linear infinite;
     @media screen and(max-width:900px) {
       content: none;
     }
-  }
-  &::before {
-    width: 100.75%;
-    height: 101.5%;
-    top: -0.75%;
-    left: -0.37%;
   }
 
   &::after {
