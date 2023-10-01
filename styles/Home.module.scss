@@ -33,13 +33,16 @@ $gradient-angle: 180deg;
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border: 1.5px solid #32383a;
 
-  @media screen and(max-width:1900px) {
+  @media screen and (max-width:1900px) {
     width: 95%;
   }
-  @media screen and(max-width:1100px) {
+  @media screen and (max-width: 1500px) {
+    width: 85%;
+  }
+  @media screen and (max-width:1100px) {
     width: 99%;
   }
-  @media screen and(max-width:900px) {
+  @media screen and (max-width:900px) {
     width: 90vh;
     height: 50vh;
     aspect-ratio: 1.7;
@@ -56,7 +59,7 @@ $gradient-angle: 180deg;
     background: linear-gradient(var(--rotate), #5ddcff, #3c67e3 67%, #4e00c2);
     border-radius: inherit;
     animation: spin 4.5s linear infinite;
-    @media screen and(max-width:900px) {
+    @media screen and (max-width:900px) {
       content: none;
     }
   }
@@ -71,7 +74,7 @@ $gradient-angle: 180deg;
 
   grid-column: 8/15;
   grid-row: 3/-1;
-  @media screen and(max-width:900px) {
+  @media screen and (max-width:900px) {
     grid-row: 3/-1;
     grid-column: 9 / 16;
   }
@@ -102,7 +105,7 @@ $gradient-angle: 180deg;
   flex-direction: column;
   justify-content: space-evenly;
 
-  @media screen and(max-width:900px) {
+  @media screen and (max-width:900px) {
     grid-column: 16/17;
   }
   .social_media_Link {
@@ -120,14 +123,14 @@ $gradient-angle: 180deg;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none;
-    @media screen and(max-width:900px) {
+    @media screen and (max-width:900px) {
       font-size: 1rem;
     }
 
     &:hover {
       color: white;
       transform: rotate(0deg) scale(1.5);
-      @media screen and(max-width:900px) {
+      @media screen and (max-width:900px) {
         transform: rotate(0deg) scale(1.25);
       }
     }
