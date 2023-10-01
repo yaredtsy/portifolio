@@ -24,7 +24,7 @@ $gradient-angle: 180deg;
   aspect-ratio: 1.858;
   position: relative;
   background-image: linear-gradient(110deg, #272f33 10%, #040404);
-
+  transform: translateY(70deg);
   border-radius: 2.05rem;
   display: grid;
   grid-template-rows: repeat(8, 1fr);
@@ -37,7 +37,7 @@ $gradient-angle: 180deg;
     width: 95%;
   }
   @media screen and (max-width: 1500px) {
-    width: 85%;
+    width: 88%;
   }
   @media screen and (max-width:1100px) {
     width: 99%;
